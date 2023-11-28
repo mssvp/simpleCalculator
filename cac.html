@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+    
+n1: <input type="number" id="myNumber1" value="Number1"><br><br>
+n2: <input type="number" id="myNumber2" value="Number2"><br><br>
+
+
+  Choose the Operation:
+  <select id="mySelect">
+    <option value="1">+</option>
+    <option value="2">-</option>
+    <option value="3">*</option>
+    <option value="4">/</option>
+  </select>
+</form>
+
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+
+function myFunction() {
+  var a = parseInt(document.getElementById("myNumber1").value);
+  var b = parseInt(document.getElementById("myNumber2").value);
+  var x = document.getElementById("mySelect").value;
+  if(x==1){
+    text=a+b;
+  }else if(x==2){
+    text=a-b;
+  }else if(x==3){
+    text=a*b;
+  }else if(x==4){
+    text=a/b;
+  }
+
+
+
+  document.getElementById("demo").innerHTML = text;
+
+}
+</script>
+
+</body>
+</html>
